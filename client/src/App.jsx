@@ -1,9 +1,10 @@
 import React from 'react';
-import Form from './Form.jsx';
 import axios from 'axios';
+import Form from './Form.jsx';
 import Recycle from './Recycle.jsx';
 import Compost from './Compost.jsx';
 import Landfill from './Landfill.jsx';
+import Quiz from './Quiz.jsx';
 
 
 class App extends React.Component {
@@ -11,7 +12,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       item: '',
-      bin: ''
+      bin: '',
     };
     this.handleInputChange=this.handleInputChange.bind(this);
     this.getBin=this.getBin.bind(this);
@@ -36,6 +37,8 @@ class App extends React.Component {
           <h1 id='title'>baregrounds</h1>
           <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
           <Recycle />
+          <img className='meadow' src='https://s3.amazonaws.com/baregrounds/meadow.png'/>
+          <img className='mainBins' src='https://s3.amazonaws.com/baregrounds/allBins.png' />
       </div>
       )
     } else if (this.state.bin === 'compost') {
@@ -44,6 +47,8 @@ class App extends React.Component {
           <h1 id='title'>baregrounds</h1>
           <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
           <Compost />
+          <img className='meadow' src='https://s3.amazonaws.com/baregrounds/meadow.png'/>
+          <img className='mainBins' src='https://s3.amazonaws.com/baregrounds/allBins.png' />
       </div>
       )
     } else if (this.state.bin === 'landfill') {
@@ -52,6 +57,8 @@ class App extends React.Component {
           <h1 id='title'>baregrounds</h1>
           <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
           <Landfill />
+          <img className='meadow' src='https://s3.amazonaws.com/baregrounds/meadow.png'/>
+          <img className='mainBins' src='https://s3.amazonaws.com/baregrounds/allBins.png' />
       </div>
       )
     } else {
@@ -59,6 +66,9 @@ class App extends React.Component {
         <div>
           <h1 id='title'>baregrounds</h1>
           <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
+          <img className='meadow' src='https://s3.amazonaws.com/baregrounds/meadow.png'/>
+          <img className='mainBins' src='https://s3.amazonaws.com/baregrounds/allBins.png' />
+          <Quiz submitAnswer={this.submitAnswer} handleRadioButton={this.handleRadioButton}/>
         </div>
       )
     }
