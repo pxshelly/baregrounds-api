@@ -8,8 +8,8 @@ class Form extends React.Component {
   render() {
     return (
       <form>
-        <input type='text'/>
-        <input type='button' value='goes there'/>
+        <input className='searchBar' type='text' onChange={(event) => {this.props.handleInputChange(event.target.value)}} />
+        <input className='submitButton' type='button' value='goes there' onClick={this.props.getBin}/>
       </form>
     )
   }
