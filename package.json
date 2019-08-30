@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "react-dev": "webpack",
+    "react-dev": "./node_modules/webpack/bin/webpack.js -p",
     "server": "node server/index.js",
     "start": "npm run react-dev && npm run server"
   },
