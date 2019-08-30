@@ -10,7 +10,7 @@ class Landfill extends React.Component {
     return (
       <div className='disposeText'>
         <br/> dispose in LANDFILL bin
-        <img className='landfillBin' src='https://s3.amazonaws.com/baregrounds/greybin.png'/>
+        <img className='landfillBin' src='https://baregrounds.s3-us-west-2.amazonaws.com/greybin.png'/>
       </div>
     )
   }
