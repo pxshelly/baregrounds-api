@@ -33,8 +33,10 @@
 }
 
 .body {
-  background-image: linear-gradient(lightgreen, white);
-  background-repeat: no-repeat;
+  background-image: linear-gradient(#F0F0F0, #ccf2ff);
+  /* #ccf2ff */
+  /* b3f0ff */
+  background-size: 100%;
 }
 
 .mainBins {

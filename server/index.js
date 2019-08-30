@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const path = require('path');
-let port = 3002;
+let port = 3004;
 const {whichBin} = require('../controllers.js')
 
 app.use(express.static(path.join(__dirname, '../client/dist/')));
