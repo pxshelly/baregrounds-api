@@ -9,7 +9,7 @@ class Recycle extends React.Component {
       <div className='disposeText'>
         <br/> dispose in RECYCLE bin
         <br/> 
-        <br/> <img className='recycleBin' src='https://s3.amazonaws.com/baregrounds/bluebin.png'/>
+        <br/> <img className='recycleBin' src='https://baregrounds.s3-us-west-2.amazonaws.com/bluebin.png'/>
       </div>
     )
   }
