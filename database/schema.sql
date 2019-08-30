@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS baregrounds; 
+-- DROP DATABASE IF EXISTS baregrounds; 
 
-CREATE DATABASE baregrounds;
+-- CREATE DATABASE baregrounds;
 
-\c baregrounds; 
+-- \c baregrounds; 
 
 CREATE TABLE disposal (
   item_id SERIAL PRIMARY KEY,
