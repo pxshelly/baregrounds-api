@@ -9,7 +9,7 @@ More often than not, there are numerous disposal bins at hand and consumers are 
 `GET /recyclables/:searchTerm`
 
 Inputs: 
-- `searchTerm`: [string] item name to be searched in bareground database
+- `searchTerm`: [string] item name to be searched in baregrounds database
 
 Outputs:
 - [array] array containing an object where each object returns the bin in which the search term belongs
