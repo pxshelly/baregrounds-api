@@ -5,7 +5,6 @@ const search = (item, callback) => {
     if (err) throw err
     const query = `SELECT bin FROM disposal WHERE LOWER(item) LIKE '%$1%'`;
     client.query(query, [item.toLowerCase()], (err, res) => {
-      done()
       if (err) {
         callback(err);
       } else {
@@ -18,7 +17,8 @@ const search = (item, callback) => {
         }
         callback(null, rows);
       }
-    })
+    });
+    done();
   });
 };
 
