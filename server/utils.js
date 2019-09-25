@@ -14,7 +14,7 @@ const sanitizeRecommendation = (rec, method) => {
       return null;
     }
   }
-  return sanitizeRecommendation;
+  return sanitizedRecommendation;
 }
 
 module.exports = {sanitizeRecommendation};

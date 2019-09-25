@@ -24,7 +24,7 @@ const search = (item, callback) => {
 
 const makeRecommendations = rec => {
   return new Promise((resolve, reject) => {
-    const query = 'INSERT INTO recommendations (item, bin, method) VALUES ($1, $2, $3)';
+    const query = 'INSERT INTO recommendations (item, bin, method) VALUES ($1, $2, $3) RETURNING item_id';
     const params = [rec.item, rec.bin, rec.method];
     const runQuery = async function() {
       const client = await pool.connect();
