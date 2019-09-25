@@ -30,7 +30,7 @@ const makeRecommendations = rec => {
       const client = await pool.connect();
       try {
         const result = await client.query(query, params);
-        resolve(result.rows);
+        resolve(result.rows[0]);
       } finally {
         client.release();
       } 
