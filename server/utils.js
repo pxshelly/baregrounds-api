@@ -3,7 +3,7 @@ const sanitizeRecommendation = (rec, method) => {
     method: method
   };
   const requiredFields = ['item', 'bin'];
-  if (typeof rec !== object || !rec) {
+  if (typeof rec !== 'object' || !rec) {
     return null;
   }
   for(let i = 0; i < requiredFields.length; i++) {

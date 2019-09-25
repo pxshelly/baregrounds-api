@@ -15,8 +15,10 @@ const makeRecommendations = (req, res) => {
   const rec = sanitizeRecommendation(req.body, 'POST')
   if (rec) {
     models.makeRecommendations(rec)
-      .then((result) => console.log(result))
-      .catch((err) => res.status(500).send(err)); 
+      .then((result) => res.send(result))
+      .catch((err) => {
+        res.status(500).send(err)
+      }); 
   } else {
     res.status(400).send('Invalid recommendation object. Please check documentation for required fields.');
   }
