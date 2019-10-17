@@ -1,21 +1,18 @@
-const models = require('./models.js');
+const { search, makeRecommendations, updateRecommendations } = require('./models.js');
 const { sanitizeRecommendation } = require('./utils');
 
 const whichBin = (req, res) => {
-  models.search(req.params.item, (err, result) => {
-    if (err) {
-      res.status(400).send(err);
-    } else {
-      res.status(200).send(result);
-    }
-  })
+  search(req.params.item)
+    .then((result) => res.status(200).send(result))
+    .catch((error) => res.status(400).send(error));
 }
 
-const makeRecommendations = (req, res) => {
+const postRecommendations = (req, res) => {
   const rec = sanitizeRecommendation(req.body, 'POST')
+  console.log(rec);
   if (rec) {
-    models.makeRecommendations(rec)
-      .then((result) => res.send(result))
+    makeRecommendations(rec)
+      .then((result) => res.status(201).send(result))
       .catch((err) => {
         res.status(500).send(err)
       }); 
@@ -24,4 +21,18 @@ const makeRecommendations = (req, res) => {
   }
 }
 
-module.exports = {whichBin, makeRecommendations};
+const putRecommendations = (req, res) => {
+  const rec = sanitizeRecommendation(req.body, 'PUT');
+  updateRecommendations(rec)
+    .then((result) => res.status(201).send(result))
+    .catch((error) => res.status(500).send(error));
+};
+
+
+
+
+
+
+
+
+module.exports = { whichBin, postRecommendations, putRecommendations };
