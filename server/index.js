@@ -12,11 +12,11 @@ app.get('/recyclables/:item', whichBin);
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/dist/index.html'))
-})
+});
 
 app.post('/recommendations', postRecommendations);
 
 app.put('/recommendations', putRecommendations);
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`)
-})
+});

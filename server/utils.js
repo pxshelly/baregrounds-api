@@ -7,8 +7,6 @@
  * 
  */
 
-
-
 const sanitizeRecommendation = (rec, method) => {
   if (typeof rec !== 'object'
     || !rec 
@@ -32,6 +30,6 @@ const sanitizeRecommendation = (rec, method) => {
     }
   };
   return sanitizedRecommendation;
-}
+};
 
 module.exports = {sanitizeRecommendation};
