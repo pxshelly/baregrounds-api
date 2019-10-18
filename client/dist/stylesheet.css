@@ -1,83 +1,79 @@
+body {
+  font: 1rem arial;
+  background-image: linear-gradient(#F0F0F0, #ccf2ff);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+
+h1 {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
 .searchBar {
   border: 3px solid navy;
-  /* border-radius: 10px; */
   width: 300px;
   height: 40px;
   box-sizing: border-box;
-  margin: auto;
-  margin-top:80px;
-  display: block;
 }
 
 .submitButton {
+  position: relative;
+  top: 1rem;
   border: 2px solid navy;
-  /* border-radius: 10px; */
   width: 100px;
   height: 25px;
   box-sizing: border-box;
-  margin: auto;
-  display: block;
-}
-
-#title {
-  font-family: 'Arapey', serif;
-  text-align: center;
 }
 
 .meadow {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 250px;
-  width: 900px;
-}
-
-.body {
-  background-image: linear-gradient(#F0F0F0, #ccf2ff);
-  /* #ccf2ff */
-  /* b3f0ff */
-  background-size: 100%;
+  position: relative;
+  top: -4rem;
+  max-width: 60%;
+  z-index: -2;
+  border-radius: 1%;
 }
 
 .mainBins {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 200px;
-  width: 400px; 
+  position: relative;
+  top: -4rem;
+  max-height: 30%;
+  max-width: 30%; 
 }
 
-.recycleBin {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 200px;
-  width: 400px; 
-}
-
-.compostBin {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 350px;
-  width: 350px; 
-}
-
-.landfillBin {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 350px;
-  width: 350px; 
-}
-.disposeText {
-  text-align: center;
-  font-family: 'Scada', sans-serif;
+.disposal-container {
+  padding-top: 1rem;
+  position: relative;
+  top: 3rem;
+  width: 100%;
   font-size: 40px;
 }
 
+.recycleBin {
+  padding-top: 2rem;
+  max-height: 10%;
+  max-width: 25%; 
+}
+
+.compostBin {
+  position: relative;
+  top: -5rem;
+  max-height: 10%;
+  max-width: 25%; 
+}
+
+.landfillBin {
+  position: relative;
+  top: -5rem;
+  max-height: 10%;
+  max-width: 27%; 
+}
+
 .quiz {
-  text-align: center;
-  font-family: 'Scada', sans-serif;
-  float: bottom;
+  position: relative;
+  top: -6rem;
 }
