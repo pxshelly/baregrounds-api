@@ -1,4 +1,5 @@
 import React from 'react';
+import { bins } from '../dist/images/index';
 
 class Compost extends React.Component {
   constructor(props) {
@@ -6,9 +7,10 @@ class Compost extends React.Component {
   }
   render() {
     return (
-      <div className='disposeText'>
-        <br/> dispose in COMPOST bin
-        <img className='compostBin' src='https://baregrounds.s3-us-west-2.amazonaws.com/greenbin.png'/>
+      <div className='disposal-container'>
+        compost
+        <br/>
+        <img className='compostBin' src={bins.greenBin}/>
       </div>
     )
   }

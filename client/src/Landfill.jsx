@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { bins } from '../dist/images/index';
 
 class Landfill extends React.Component {
   constructor(props) {
@@ -8,9 +8,10 @@ class Landfill extends React.Component {
 
   render() {
     return (
-      <div className='disposeText'>
-        <br/> dispose in LANDFILL bin
-        <img className='landfillBin' src='https://baregrounds.s3-us-west-2.amazonaws.com/greybin.png'/>
+      <div className='disposal-container'>
+        landfill
+        <br/>
+        <img className='landfillBin' src={bins.greyBin}/>
       </div>
     )
   }
