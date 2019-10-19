@@ -9,7 +9,6 @@ const whichBin = (req, res) => {
 
 const postRecommendations = (req, res) => {
   const rec = sanitizeRecommendation(req.body, 'POST')
-  console.log(rec);
   if (rec) {
     makeRecommendations(rec)
       .then((result) => res.status(201).send(result))

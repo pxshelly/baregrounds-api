@@ -5,6 +5,12 @@
  * @param method {{ String }} - A string that represents the HTTP method
  * @return - {{ Object }} - A database ready recommemdation object
  * 
+ * @note - The input recommendation is expected to look like this: 
+ * {
+ *   item: string;
+ *   bin: string;
+ *   item_id?: number;
+ * }
  */
 
 const sanitizeRecommendation = (rec, method) => {
@@ -15,20 +21,25 @@ const sanitizeRecommendation = (rec, method) => {
     || !method.match(/^(GET|POST|PUT|DELETE)$/)) {
     return null;
   };
+
   const sanitizedRecommendation = {
     method: method
   };
+
   const optionalFields = ['item_id'];
   const requiredFields = ['item', 'bin'];
   const allFields = optionalFields.concat(requiredFields);
-  for(let i = 0; i < allFields.length; i++) {
+
+  for (let i = 0; i < allFields.length; i++) {
     const currentField =  allFields[i];
-    if(rec[currentField] !== undefined) {
+
+    if (rec[currentField] !== undefined) {
       sanitizedRecommendation[currentField] = rec[currentField]; 
     } else if (requiredFields.includes(currentField)) {
       return null;
     }
   };
+
   return sanitizedRecommendation;
 };
 
