@@ -1,5 +1,5 @@
 import React from 'react';
-import { bins } from '../dist/images/index';
+import { bins } from '../../dist/images/index';
 
 class Landfill extends React.Component {
   constructor(props) {

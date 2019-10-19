@@ -5,7 +5,7 @@ import Recycle from './Recycle.jsx';
 import Compost from './Compost.jsx';
 import Landfill from './Landfill.jsx';
 import Quiz from './Quiz.jsx';
-import { images, bins } from '../dist/images/index';
+import { images, bins } from '../../dist/images/index';
 
 class App extends React.Component {
   constructor(props) {
