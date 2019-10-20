@@ -1,19 +1,20 @@
 import React from 'react';
 import { bins } from '../../dist/images/index';
 
-class Compost extends React.Component {
+class Bin extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
+    const bin = this.props.bin;
     return (
       <div className='disposal-container'>
-        compost
+        {this.props.bin}
         <br/>
-        <img className='compostBin' src={bins.greenBin}/>
+        <img className={`${bin}Bin`} src={bins[bin]}/>
       </div>
     )
   }
 }
 
-export default Compost;
+export default Bin;

@@ -1,7 +1,7 @@
 const bins = {
-  blueBin: 'https://baregrounds.s3-us-west-2.amazonaws.com/bluebin.png',
-  greenBin: 'https://baregrounds.s3-us-west-2.amazonaws.com/greenbin.png',
-  greyBin: 'https://baregrounds.s3-us-west-2.amazonaws.com/greybin.png',
+  recycle: 'https://baregrounds.s3-us-west-2.amazonaws.com/bluebin.png',
+  compost: 'https://baregrounds.s3-us-west-2.amazonaws.com/greenbin.png',
+  landfill: 'https://baregrounds.s3-us-west-2.amazonaws.com/greybin.png',
   mainBins: 'https://baregrounds.s3-us-west-2.amazonaws.com/allBins.png'
 };
 

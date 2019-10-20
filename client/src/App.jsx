@@ -1,9 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Form from './Form.jsx';
-import Recycle from './Recycle.jsx';
-import Compost from './Compost.jsx';
-import Landfill from './Landfill.jsx';
+import Bin from './Bin.jsx';
 import Quiz from './Quiz.jsx';
 import { images, bins } from '../../dist/images/index';
 
@@ -31,28 +29,12 @@ class App extends React.Component {
   }
 
   render() {
-    if (this.state.bin === 'recycle') {
+    if (this.state.bin) {
       return (
         <div>
           <h1>baregrounds</h1>
           <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
-          <Recycle />
-      </div>
-      )
-    } else if (this.state.bin === 'compost') {
-      return (
-        <div>
-          <h1>baregrounds</h1>
-          <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
-          <Compost />
-      </div>
-      )
-    } else if (this.state.bin === 'landfill') {
-      return (
-        <div>
-          <h1>baregrounds</h1>
-          <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
-          <Landfill />
+          <Bin bin={this.state.bin} />
       </div>
       )
     } else {
