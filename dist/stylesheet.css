@@ -6,8 +6,8 @@ body {
   text-align: center;
   margin: auto;
   display: block;
+  height: 100vh;
 }
-
 
 h1 {
   padding-top: 1.5rem;
