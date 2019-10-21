@@ -1,12 +1,13 @@
 body {
   font: 1rem arial;
   background-image: linear-gradient(#F0F0F0, #ccf2ff);
-  background-size: 100%;
+  background-size: 100%vh;
   background-repeat: no-repeat;
   text-align: center;
   margin: auto;
   display: block;
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
 }
 
 h1 {
