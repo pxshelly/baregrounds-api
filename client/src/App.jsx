@@ -11,6 +11,7 @@ class App extends React.Component {
     this.state = {
       item: '',
       bin: '',
+      error: ''
     };
     this.handleInputChange=this.handleInputChange.bind(this);
     this.getBin=this.getBin.bind(this);
@@ -19,7 +20,11 @@ class App extends React.Component {
   getBin() {
     axios.get(`/recyclables/${this.state.item}`)
       .then(({data}) => {
-        this.setState({bin: data[0].bin})
+        if (data.length) {
+          this.setState({bin: data[0].bin})
+        } else {
+          this.setState({error: 'This item cannot be found.'});
+        }
       })
       .catch((error) => console.log(error))
   }
@@ -39,9 +44,10 @@ class App extends React.Component {
       )
     } else {
       return (
-        <div className='body-container'>
+        <div>
           <h1>baregrounds</h1>
           <Form handleInputChange={this.handleInputChange} getBin={this.getBin}/>
+          <p className='error'>{this.state.error}</p>
           <img className='meadow' src={images.meadow}/>
           <br/>
           <img className='mainBins' src={bins.mainBins} />

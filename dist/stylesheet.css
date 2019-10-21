@@ -33,9 +33,9 @@ h1 {
 
 .meadow {
   position: relative;
-  top: -4rem;
+  top: -5rem;
   max-width: 60%;
-  z-index: -2;
+  z-index: -1;
   border-radius: 1%;
 }
 
@@ -77,4 +77,10 @@ h1 {
 .quiz {
   position: relative;
   top: -6rem;
+}
+
+.error {
+  position: absolute;
+  left: 44vw;
+  margin-top: 2.5rem;
 }
