@@ -7,6 +7,7 @@
     "react-dev": "./node_modules/webpack/bin/webpack.js -p",
     "server": "node server/index.js",
     "dev": "nodemon server/index.js",
+    "webpack": "webpack --watch",
     "start": "npm run react-dev && npm run server",
     "test": "mocha"
   },
